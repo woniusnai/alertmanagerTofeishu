@@ -19,7 +19,13 @@ pip install --no-cache-dir flask requests gunicorn tenacity
 python alertmanager_feishu_webhook.py
 ```
 
-## 然后修改alertmanager发送地址
+## 测试消息：运行test.sh
+```bash
+# 注意默认test.sh 连接的是本地9527端口，需要根据实际的脚本启动或者映射的ip端口修改。
+sh test.sh
+```
+
+## 配置alertmanager.yml发送地址
 ```bash
 receivers:
   #此处省略其他配置
