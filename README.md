@@ -1,5 +1,11 @@
 # 快速启动
 
+## 拉取项目
+```bash
+git clone https://github.com/woniusnai/alertmanagerTofeishu.git
+cd alertmanagerTofeishu
+```
+
 ## 方式一：Docker（推荐）  
 ```bash
 docker build -t alertmanager-feishu-webhook .
@@ -9,6 +15,7 @@ docker run -d -p 9527:9527 \
   --name alertmanager-feishu-webhook \
   alertmanager-feishu-webhook
 ```
+
 ## 方式二：直接通过本地python启动
 ### 先升级python至3.7以上过程不多赘述
 ### 安装升级好python后安装依赖包
@@ -34,6 +41,7 @@ receivers:
     - url: 'http://ip:9527/webhook'
       send_resolved: true
 ```
+
 ## 效果展示
 <img width="660" height="640" alt="image" src="https://github.com/user-attachments/assets/ee7b437a-82a1-46ce-949d-52611eb1ae40" />
 
