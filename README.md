@@ -15,7 +15,7 @@ docker run -d -p 9527:9527 \
 ```bash
 #安装依赖
 pip install --no-cache-dir flask requests gunicorn tenacity
-#运行脚本
+#运行脚本（运行脚本前先确认脚本15，17行的机器人地址和签名正确，可直接修改脚本，变量内容，或者通过环境变量映射，未配置环境变量默认读取脚本内默认配置）
 python alertmanager_feishu_webhook.py
 ```
 
@@ -28,3 +28,6 @@ receivers:
     - url: 'http://ip:9527/webhook'
       send_resolved: true
 ```
+## 效果展示
+<img width="660" height="640" alt="image" src="https://github.com/user-attachments/assets/ee7b437a-82a1-46ce-949d-52611eb1ae40" />
+
