@@ -11,6 +11,8 @@ docker run -d -p 9527:9527 \
 ```
 ## 然后修改alertmanager发送地址
 ```bash
+receivers:
+  #此处省略其他配置
   - name: 'feishu'
     webhook_configs:
     - url: 'http://ip:9527/webhook'
