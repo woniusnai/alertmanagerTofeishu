@@ -1,4 +1,4 @@
-curl -X POST http://10.102.11.17:30900/webhook \
+curl -X POST http://127.0.0.1:9527/webhook \
   -H "Content-Type: application/json" \
   -d '{
   "alerts": [
